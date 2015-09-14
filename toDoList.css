@@ -1,0 +1,20 @@
+table {
+	background-color: #E4E8E3;
+	border-color: #C9D1D4;
+}
+
+.high {
+	color: red;
+}
+		
+.medium {
+	color: #F7A40A;
+}
+		
+.low {
+	color: green;
+}
+
+.completed {
+	text-decoration: line-through;
+}
