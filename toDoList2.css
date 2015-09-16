@@ -1,0 +1,28 @@
+section {
+	border: 3px black;
+	border-style: solid;
+	height: 100px;
+	width: 25%;
+	overflow: auto;
+}
+
+section.high {
+	background-color: red;
+	color: white;
+}
+		
+section.medium {
+	background-color: #F7A40A;
+	color: white;
+}
+		
+section.low {
+	background-color: grey;
+	color: white;
+}
+
+section.completed {
+	text-decoration: line-through;
+	background-color: black;
+	color: cyan;
+}
