@@ -1,3 +1,42 @@
 body {
 	background-color: #85F7FF;
+	margin: 0;
+	padding: 0;
+	height: 100%
 }
+
+div.wrapper {
+	min-height: 100%;
+	position: relative;
+}
+
+div.content {
+	padding-bottom: 20px;
+}
+
+nav#index {
+	position: relative;
+	width: 100%;
+	height: 15px;
+}
+
+section#indexLeft {
+	position: relative;
+	width: 50%;
+	float: left;
+}
+
+section#indexRight {
+	position: relative;
+	width: 50%;
+	float: right;
+}
+
+footer {
+	background-color: black;
+	position: absolute;
+	width: 100%;
+	height: 20px;
+	bottom: 0;
+}
+	
