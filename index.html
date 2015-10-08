@@ -2,49 +2,54 @@
   <head>
     <title>Ryne Hanson</title>
 	<link rel="stylesheet" href="myStyle.css" type="text/css">
+	<script src="calculator.js"></script>
   </head>
   
   <body>
-  <div class ="wrapper">
-  <div class = "content">
+  <!--<div class ="wrapper">
+  <div class = "content">-->
   <nav id="index">
-  	<p><a href="hobby.html">Hobby</a> <a href="gallery.html">Gallery</a></p>
+  	<p><a href="hobby.html">Hobby</a> <a href="gallery.html">Gallery</a> <a href="calculator.html">Calculator</a></p>
   </nav>
   <section id="indexLeft">
     <h1>Ryne Hanson!</h1>
+    
+    <div id="Ryne">
     <p><img src="https://yugiohblog.konami.com/wp-content/uploads/2015/04/Ryne-Hanson.jpg"></p>
+    </div> <!-- #Ryne -->
+    
     <p>I am a Luther College student and a competitive Yu-Gi-Oh! player. Recently, I was featured in a top-level tournament. You can read about the my feature match in Chicago, IL <a href="https://yugiohblog.konami.com/?p=20042">here</a>.</p>
   </section>
   	
-  	<!-- This is my old gallery. Looks nice
-  	<table width='15%' border=0px cellspacing=1>
-      <tr>
-        <td><img src="http://img2.wikia.nocookie.net/__cb20141220010105/halo/images/b/b1/H2A_CinematicRender_John-117-CloseFrontView.jpg" height=38 width=30></td>
-        <td><img src="https://pbs.twimg.com/profile_images/2358311717/typicalchazz.jpg" height=23 width=38></td>
-        <td><img src="http://www.luther.edu/publications/assets/norse_helmet_blue.jpg" height=25 width=30></td>
-      </tr>
-      <tr>
-        <td><img src="http://i62.tinypic.com/2mfkn0w.jpg" height=25 width=25></td>
-        <td><img src="http://mediaministries.biz/_ondemand/nmo/extra/applelogo.png" height=25 width=25></td>
-        <td><img src="http://rs415.pbsrc.com/albums/pp232/ChiodosLove99/Chiodos/Chiodoscopy.jpg~c200" height=25 width = 25></td>
-      </tr>
-      <tr>
-        <td><img src="http://www.finestdaily.com/wp-content/uploads/2011/08/hi-512-2.jpg" height=25 width=25></td>
-        <td><img src="http://orig02.deviantart.net/35eb/f/2009/195/9/d/eye_of_horus_by_atlame.jpg" height=25 width=25></td>
-        <td><img src="http://cdn.flaticon.com/png/256/25231.png" height=25 width=25></td>
-      </tr>
-    </table>
-	-->
   <section id="indexRight">		
     <h1>Assignments</h1>
 	<p><a href="toDoList.html">To-Do List</a></p>
 	<p><a href="toDoList2.html">To-Do List #2</a></p>
 	<p><a href="toDoList3.html">To-Do List #3</a></p>
+  <section id="calculator">
+  
+  <input id="numberOne" type="text" value="">
+  <input id="numberTwo" type="text" value=""></br></br>
+  <button class="calculatorButton" onclick="addition();">+</button>
+  <button class="calculatorButton" onclick="subtraction();">-</button>
+  <button class="calculatorButton" onclick="multiplication();">*</button>
+  <button class="calculatorButton" onclick="division();">/</button>
+  </br>
+  <button class="calculatorButton" onclick="square();">x<sup>2</sup></button>
+  <button class="calculatorButton" onclick="power();">x<sup>n</sup></button>
+  <button class="calculatorButton" onclick="squareRoot();">&radic;<span style="text-decoration: overline">x</span></button>
+  </br></br>
+  
+  <section id="answer">
+  <h2>0</h2>
+  </section> <!--End #answer -->
+  
+  </section> <!--End #calculator -->
   </section>
-  </div> <!-- .content -->
+  <!--</div> <!-- .content -->
   <footer>
   	<h2>&copy 2015 Ryne Hanson</h2>
   </footer>
-  </div> <!-- .wrapper -->
+  <!--</div> <!-- .wrapper -->
   </body>
 </html>
