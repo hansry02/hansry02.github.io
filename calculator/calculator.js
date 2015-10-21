@@ -143,9 +143,19 @@ squareRoot = function() {
   	}
   	  
   	else {
-  	  
-  	  	valueAnswer = Math.sqrt(valueOne);
+  	  	if (valueOne < 0) {
+  	  		
+  	  		absolute = Math.abs(valueOne);
+  	  		
+  	  		valueAnswer = Math.sqrt(absolute);
+  	  		
+  	  		answer.innerHTML = "<h2>" + valueAnswer + "i</h2>";
+  	  	}
+  	  	
+  	  	else {
+  	  		valueAnswer = Math.sqrt(valueOne);
   
-  	  	answer.innerHTML = "<h2>" + valueAnswer + "</h2>";
+  	  		answer.innerHTML = "<h2>" + valueAnswer + "</h2>";
+  	  	}
   	}
 }
