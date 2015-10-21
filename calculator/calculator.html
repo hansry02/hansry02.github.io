@@ -1,0 +1,213 @@
+<html>
+<style>
+  
+  #numberOne {
+  	position: relative;
+  	width: 50%;
+  	float: left;
+  }
+  
+  #numberTwo {
+  	position: relative;
+  	width: 50%;
+  	float: right;
+  }
+  
+  button.calculatorButton {
+  	position: relative;
+  	width: 25%;
+  	float: left;
+  	text-align: center;
+  }
+
+  section#calculator {
+  	background-color: lightblue;
+  	border: 1px black;
+  	border-style: solid;
+  	position: relative;
+  	width: 20%;
+  	padding: 1%;
+  }
+  
+  #answer {
+  	text-align: center;
+  	overflow: auto;
+  }
+  
+</style>
+<body>
+  <section id="calculator">
+  
+  <input id="numberOne" type="text" value="">
+  <input id="numberTwo" type="text" value=""></br></br>
+  <button class="calculatorButton" onclick="addition();">+</button>
+  <button class="calculatorButton" onclick="subtraction();">-</button>
+  <button class="calculatorButton" onclick="multiplication();">*</button>
+  <button class="calculatorButton" onclick="division();">/</button>
+  </br>
+  <button class="calculatorButton" onclick="square();">x<sup>2</sup></button>
+  <button class="calculatorButton" onclick="power();">x<sup>n</sup></button>
+  <button class="calculatorButton" onclick="squareRoot();">&radic;<span style="text-decoration: overline">x</span></button>
+  </br></br>
+  
+  <section id="answer">
+  <h2>0</h2>
+  </section> <!--End #answer -->
+  
+  </section> <!--End #calculator -->
+  
+  <script type="text/javascript">
+  	addition = function() {
+  	  aNum = document.querySelector('#numberOne');
+  	  otherNum = document.querySelector('#numberTwo');
+  	  answer = document.querySelector('#answer');
+  	  
+  	  valueOne = Number.parseFloat(aNum.value);
+  	  valueTwo = Number.parseFloat(otherNum.value);
+  	  
+  	  if (isNaN(valueOne) || isNaN(valueTwo)){
+  	  
+  	  	answer.innerHTML = "<h2>Error</h2>";
+  	  }
+  	  
+  	  else {
+  	  
+  	  	valueAnswer = valueOne + valueTwo;
+  
+  	  	answer.innerHTML = "<h2>" + valueAnswer + "</h2>";
+  	  }
+  	}
+  	
+  	subtraction = function() {
+  	  aNum = document.querySelector('#numberOne');
+  	  otherNum = document.querySelector('#numberTwo');
+  	  answer = document.querySelector('#answer');
+  	  
+  	  valueOne = Number.parseFloat(aNum.value);
+  	  valueTwo = Number.parseFloat(otherNum.value);
+  	  
+  	  if (isNaN(valueOne) || isNaN(valueTwo)){
+  	  
+  	  	answer.innerHTML = "<h2>Error</h2>";
+  	  }
+  	  
+  	  else {
+  	  
+  	  	valueAnswer = valueOne - valueTwo;
+  
+  	  	answer.innerHTML = "<h2>" + valueAnswer + "</h2>";
+  	  }
+  	}
+  	
+  	multiplication = function() {
+  	  aNum = document.querySelector('#numberOne');
+  	  otherNum = document.querySelector('#numberTwo');
+  	  answer = document.querySelector('#answer');
+  	  
+  	  valueOne = Number.parseFloat(aNum.value);
+  	  valueTwo = Number.parseFloat(otherNum.value);
+  	  
+  	  if (isNaN(valueOne) || isNaN(valueTwo)){
+  	  
+  	  	answer.innerHTML = "<h2>Error</h2>";
+  	  }
+  	  
+  	  else {
+  	  
+  	  	valueAnswer = valueOne * valueTwo;
+  
+  	  	answer.innerHTML = "<h2>" + valueAnswer + "</h2>";
+  	  }
+  	}
+  	
+  	division = function() {
+  	  aNum = document.querySelector('#numberOne');
+  	  otherNum = document.querySelector('#numberTwo');
+  	  answer = document.querySelector('#answer');
+  	  
+  	  valueOne = Number.parseFloat(aNum.value);
+  	  valueTwo = Number.parseFloat(otherNum.value);
+  	  
+  	  if (isNaN(valueOne) || isNaN(valueTwo)){
+  	  
+  	  	answer.innerHTML = "<h2>Error</h2>";
+  	  }
+  	  
+  	  else {
+  	  
+  	  	valueAnswer = valueOne / valueTwo;
+  
+  	  	answer.innerHTML = "<h2>" + valueAnswer + "</h2>";
+  	  }
+  	}
+  	
+  	square = function() {
+  	  aNum = document.querySelector('#numberOne');
+  	  answer = document.querySelector('#answer');
+  	  
+  	  valueOne = Number.parseFloat(aNum.value);
+  	  
+  	  if (isNaN(valueOne)){
+  	  
+  	  	answer.innerHTML = "<h2>Error</h2>";
+  	  }
+  	  
+  	  else {
+  	  
+  	  	valueAnswer = valueOne * valueOne;
+  
+  	  	answer.innerHTML = "<h2>" + valueAnswer + "</h2>";
+  	  }
+  	}
+
+  	power = function() {
+  	  aNum = document.querySelector('#numberOne');
+  	  otherNum = document.querySelector('#numberTwo');
+  	  answer = document.querySelector('#answer');
+  	  
+  	  valueOne = Number.parseFloat(aNum.value);
+  	  valueTwo = Number.parseFloat(otherNum.value);
+  	  
+  	  if (isNaN(valueTwo)) {
+  	    valueAnswer = "Error";
+  	  }
+  	  
+  	  else {
+  	  
+  	  	tempPower = Math.abs(valueTwo);
+  	    valueAnswer = 1;
+  	    for (i = 0; i < tempPower; i++) {
+  	  	  valueAnswer = valueAnswer * valueOne;
+  	    }
+  	    
+  	    if (valueTwo != tempPower) {
+  	      valueAnswer = 1 / valueAnswer;
+  	    }
+  	    
+  	    else {}
+  	  }
+  	  
+  	  answer.innerHTML = "<h2>" + valueAnswer + "</h2>";
+  	}
+  	
+  	squareRoot = function() {
+  	  aNum = document.querySelector('#numberOne');
+  	  answer = document.querySelector('#answer');
+  	  
+  	  valueOne = Number.parseFloat(aNum.value);
+  	  
+  	  if (isNaN(valueOne)){
+  	  
+  	  	answer.innerHTML = "<h2>Error</h2>";
+  	  }
+  	  
+  	  else {
+  	  
+  	  	valueAnswer = Math.sqrt(valueOne);
+  
+  	  	answer.innerHTML = "<h2>" + valueAnswer + "</h2>";
+  	  }
+  	}
+  </script>
+</body>
+</html>
