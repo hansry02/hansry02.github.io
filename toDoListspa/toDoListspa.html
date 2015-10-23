@@ -11,6 +11,12 @@
 	<h1>Dynamic To-Do List</h1>
 	
 	<aside>
+		<select id="functions" onchange="checkFunction();">
+			<option id="defaultOption" value="0" selected>Options</option>
+			<option value="1">Check All</option>
+			<option value="2">Uncheck All</option>
+			<option value="3">Clear All</option>
+		</select>	
 		<input id="listItem" type="text" value="" size="80">
 		<select id="priority">
 			<option value="high">High</option>
