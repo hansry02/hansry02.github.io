@@ -44,7 +44,7 @@ complete = function() {
 localSave = function() {
 	var saves = [];
 	var priorities = [];
-	var i;
+
 	lis = document.querySelectorAll('li');
 	
 	for (i=0; i<lis.length; i++) {
@@ -64,4 +64,54 @@ restore = function() {
 	for (i=0; i<tasks.length; i++) {
 		insertTask(tasks[i],priorities[i]);
 	}
+}
+
+checkAll = function() {
+	lis = document.querySelectorAll('li input');
+	
+	for (i=0; i<lis.length; i++) {
+		lis[i].checked = true;
+		lis[i].parentNode.classList.add("completed");
+	}
+	
+	localSave();
+}
+
+unCheckAll = function() {
+	lis = document.querySelectorAll('li input');
+	
+	for (i=0; i<lis.length; i++) {
+		lis[i].checked = false;
+		lis[i].parentNode.classList.remove("completed");
+	}
+	
+	localSave();
+}
+
+clearAll = function() {
+	theList = document.querySelector('ul');
+	
+	theList.innerHTML = "";
+	
+	localSave();
+}
+
+checkFunction = function() {
+	functions = document.querySelector('#functions');
+	if (functions.value == "1") {
+		checkAll();
+		functions.value = "0";
+	}
+	
+	else if (functions.value == "2") {
+		unCheckAll();
+		functions.value = "0";
+	}
+	
+	else if (functions.value == "3") {
+		clearAll();
+		functions.value = "0";
+	}
+	
+	else {}
 }
